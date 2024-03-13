@@ -14,9 +14,10 @@ jobs:
     test:
       docker:
         -image:python
-    steps:
-      -checkout
-      -run:python Test.py
+        
+      steps:
+        -checkout
+        -run:python Test.py
     #Orchestrate our job run sequence
     worksflows:
       build_and_test:
