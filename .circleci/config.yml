@@ -11,17 +11,17 @@ jobs:
     steps:
       -checkout
       -run:python Main1.py
-    test:
-      docker:
-        -image:python
+  test:
+    docker:
+      -image:python
         
-      steps:
-        -checkout
-        -run:python Test.py
-    #Orchestrate our job run sequence
-    worksflows:
-      build_and_test:
-        jobs:
-          -build
-          -test
+    steps:
+      -checkout
+      -run:python Test.py
+      #Orchestrate our job run sequence
+worksflows:
+  build_and_test:
+    jobs:
+      -build
+      -test
     
