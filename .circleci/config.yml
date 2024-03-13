@@ -21,6 +21,6 @@ jobs:
     worksflows:
       build_and_test:
         jobs:
-        -build
-        -test
+          -build
+          -test
     
